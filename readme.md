@@ -12,11 +12,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the purpose of creating all neural nets we will use MXNet and its high-level API - Gluon, and train them on multiple GPUs.
 
-**Note:** _Although I try to get into details of the math and the mechanisms behind almost all algorithms and techniques, this notebook is not explicitly intended to explain how machine/deep learning, or the stock markets, work. The purpose is rather to show how we can use different techniques and algorithms for the purpose of accurately predicting stock price movements, and to also give rationale behind the reason and usefulness of using each technique at each step._
-
-_Notebook created: January 9, 2019_.
-
-
 **Figure 1 - The overall architecture of our work**
 
 <center><img src='imgs/main.jpg' width=1060></img></center>
@@ -69,10 +64,6 @@ _Notebook created: January 9, 2019_.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accurately predicting the stock markets is a complex task as there are millions of events and pre-conditions for a particilar stock to move in a particular direction. So we need to be able to capture as many of these pre-conditions as possible. We also need make several important assumptions: 1) markets are not 100% random, 2) history repeats, 3) markets follow people's rational behavior, and 4) the markets are '_perfect_'. And, please, do read the **Disclaimer** at the <a href="#disclaimer">bottom</a>.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will try to predict the price movements of **Goldman Sachs** (NYSE: GS). For the purpose, we will use daily closing price from January 1st, 2010 to December 31st, 2018 (seven years for training purposes and two years for validation purposes). _We will use the terms 'Goldman Sachs' and 'GS' interchangeably_.
-
-# 2. Acknowledgement <a class="anchor" id="acknowledgement"></a>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Before we continue, I'd like to thank my friends <a href="https://github.com/manganganath">Nuwan</a> and <a href="https://github.com/Q4living">Thomas</a> without whose ideas and support I wouldn't have been able to create this work.
 
 # 3. The Data <a class="anchor" id="thedata"></a>
 
@@ -1489,25 +1480,5 @@ plot_prediction('Final result.')
 ![png](output_173_0.png)
 
 
-#### As a next step, I will try to take everything separately and provide some analysis on what worked and why. Why did we receive these results and is it just by coinscidence? So stay tuned.
-
-# What is next? <a class="anchor" id="whatisnext"></a>
-
-- Next, I will try to create a RL environment for testing trading algorithms that decide when and how to trade. The output from the GAN will be one of the parameters in the environment.
-
-# About me <a class="anchor" id="me"></a>
-
-www.linkedin.com/in/borisbanushev
-
-# Disclaimer <a class="anchor" id="disclaimer"></a>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**This notebook is entirely informative. None of the content presented in this notebook constitutes a recommendation that any particular security, portfolio of securities, transaction or investment strategy is suitable for any specific person. Futures, stocks and options trading involves substantial risk of loss and is not suitable for every investor. The valuation of futures, stocks and options may fluctuate, and, as a result, clients may lose more than their original investment.**
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**All trading strategies are used at your own risk.**
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are many many more details to explore - in choosing data features, in choosing algorithms, in tuning the algos, etc. This version of the notebook itself took me 2 weeks to finish. I am sure there are many unaswered parts of the process. So, any comments and suggestion - please do share. I'd be happy to add and test any ideas in the current process.
-
 Thanks for reading.
 
-Best,
-Boris
